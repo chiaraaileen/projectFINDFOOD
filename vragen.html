@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-App="KRRclass" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>&mdash; Find Food.</title>
+
+</head>
+
+
+
+
+<body onchange="showQuestions()" ng-controller="MainCtrl" onclick="showRestaurant()">
+  <div id="menubar">
+    <button onclick="location.href='index.html';">Home</button>
+    <button onclick="location.href='contact.html';">Contact</button>
+    <button onclick="location.href='about.html';">About</button>
+  </div>
+
+  <div class="container">
+    <img src="hamburgerbutton.png" alt="Hamburger" class="image">
+    <div class="overlay">
+      <div class="text">Fast food, a type of mass-produced food that is prepared and served very quickly, was first popularized in the 1950s in the United States, and is typically less nutritionally valuable compared to other foods and dishes. While any meal with low preparation time can be considered fast food, typically the term refers to food sold in a restaurant or store with preheated or precooked ingredients, and served to the customer in a packaged form for take-out/take-away. Fast food restaurants are traditionally distinguished by their ability to serve food via a drive-through. The term \"fast food\" was recognized in a dictionary by Merriam\u2013Webster in 1951. Outlets may be stands or kiosks, which may provide no shelter or seating, or fast food restaurants (also known as quick service restaurants). Franchise operations that are part of restaurant chains have standardized foodstuffs shipped to each restaurant from central locations. According to the National Institutes of Health (NIH), fast foods are quick alternatives to home-cooked meals. They are also high in saturated fat, sugar, salt and calories. Eating too much fast food has been linked to, among other things, colorectal cancer, obesity and high cholesterol. The traditional family dinner is increasingly being replaced by the consumption of takeaway, or eating \"on the run\". As a result, the time invested on food preparation is getting lower and lower, with an average couple in the United States spending 47 minutes and 19 minutes per day, carrying out food preparation.</div>
+    </div>
+  </div>
+
+  <div class="container1">
+    <img src="tapasbutton.png" alt="Tapas" class="image">
+    <div class="overlay1">
+      <div class="text1">Tapas are a wide variety of appetizers, or snacks, in Spanish cuisine. They may be cold (such as mixed olives and cheese) or hot (such as chopitos, which are battered, fried baby squid). In select bars in Spain, tapas have evolved into an entire, sophisticated cuisine. In Spain, patrons of tapas can order many different tapas and combine them to make a full meal. In some Central American countries, such snacks are known as bocas. In Mexico, similar dishes are called botanas. The serving of tapas is designed to encourage conversation, because people are not so focused upon eating an entire meal that is set before them. Also, in some countries it is customary for diners to stand and move about while eating tapas.</div>
+    </div>
+  </div>
+
+
+  <h1>Questions</h1>
+  <form action="/main.js">
+    <h3>What are you looking for?</h3>
+    <input type="radio" id="veganfood" name="foodtype" value="Vegan">Vegan<br>
+    <input type="radio" id="dairyfree" name="foodtype" value="Dairy free">Dairy free<br>
+    <input type="radio" id="gluten" name="foodtype" value="Gluten free">Gluten free<br>
+    <input type="radio" id="carbsfree" name="foodtype" value="Carbs free">Carbs free<br>
+  </form> <br>
+
+
+  <form action="/main.js" id="veganoption" style="display: none">
+    <h3>What do you prefer?</h3>
+    <input type="radio" id="vegan_fastfood" name="vegantype" value="FastFood" ng-click="doMyAction()">Fast Food*<br>
+    <input type="radio" id="vegan_pasta" name="vegantype" value="Pasta" ng-click="doMyAction()">Italian Food*<br>
+    <input type="radio" id="vegan_indianfood" name="vegantype" value="IndianFood" ng-click="doMyAction()">Indian Food*<br>
+    <input type="radio" id="vegan_salad" name="vegantype" value="salad" ng-click="doMyAction()">Salad*<br>
+    <p>* Double click to configer answer</p>
+  </form>
+
+  <form action="/main.js" id="dairyoption" style="display: none">
+    <h3>What do you prefer?</h3>
+    <input type="radio" id="dairy_fish" name="dairytype" value="Fish" ng-click="doMyAction()">Fish*<br>
+    <input type="radio" id="dairy_chicken" name="dairytype" value="Chicken" ng-click="doMyAction()">Chicken*<br>
+    <input type="radio" id="dairy_salad" name="dairytype" value="Salad" ng-click="doMyAction()">Salad*<br>
+    <input type="radio" id="dairy_pizza" name="dairytype" value="PizzaPasta" ng-click="doMyAction()">Italian Food*<br>
+    <p>* Double click to configer answer</p>
+  </form>
+
+  <form action="/main.js" id="glutenoption" style="display: none">
+    <h3>What do you prefer?</h3>
+    <input type="radio" id="gluten_mediterranean" name="glutentype" value="mediterranean" ng-click="doMyAction()">Tapas*<br>
+    <input type="radio" id="gluten_fish" name="glutentype" value="fish" ng-click="doMyAction()">Fish*<br>
+    <input type="radio" id="gluten_pancake" name="glutentype" value="pancake" ng-click="doMyAction()">Pancakes*<br>
+    <input type="radio" id="gluten_pizza" name="glutentype" value="PizzaPasta" ng-click="doMyAction()">Italian Food*<br>
+    <p>* Double click to configer answer</p>
+  </form>
+
+  <form action="/main.js" id="carbsoption" style="display: none">
+    <h3>What do you prefer?</h3>
+    <input type="radio" id="carbs_french" name="carbstype" value="frenchfood" ng-click="doMyAction()">French Food*<br>
+    <input type="radio" id="carbs_sugarfree" name="carbstype" value="sugarfree" ng-click="doMyAction()">Sugarfree And Organic Food*<br>
+    <input type="radio" id="carbs_salad" name="carbstype" value="Salad" ng-click="doMyAction()">Salad*<br>
+    <input type="radio" id="carbs_snackbar" name="carbstype" value="snackbar" ng-click="doMyAction()">Healhty Snackbar*<br>
+    <p>* Double click to configer answer</p>
+  </form>
+
+  <!--<p>{{result}}</p>
+  <p>Query Results: {{resultQ2}}</p>
+  <h2>predefined query results + chart </h2>
+  <p>Query Results: {{resultQ1}}</p>  -->
+   <!-- <p>{{result}}</p> moet nog weg
+  <p>Query Results: {{resultQ2}}</p>  moet nog weg -->
+  <h2>Your restaurant is {{finalRestaurant}} in {{finalPlace}}.</h2>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/Chart.min.js"></script>
+  <script src="js/angular-chart.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

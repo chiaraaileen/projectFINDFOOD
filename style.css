@@ -1,0 +1,216 @@
+#voorpagina {
+  background-image: url("achtergrond1.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: white;
+}
+
+#startpagina {
+  background-image: url("achtergrond3.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: white;
+}
+
+body {
+  background-image: url("achtergrond1.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: white;
+  font-family: Roboto;
+  text-align: center;
+}
+
+
+#menubar {
+  margin: auto;
+  width: auto;
+  height: 100%;
+  background-color: black;
+  padding: 10px;
+  font-size: 120%;
+  text-align: right;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  border-radius: 12px;
+  font-size: 80%;
+  cursor: pointer;
+}
+
+#button1 {
+  background:none;
+  border:none;
+  color: black;
+  font-size: 600%;
+  margin-top: 20%;
+  cursor: pointer;
+  margin: auto;
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+#button2 {
+  background:none;
+  border:none;
+  color: black;
+  font-size: 600%;
+  margin-top: 20%;
+  cursor: pointer;
+  margin: auto;
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+
+
+#muis {
+  background:none;
+  border:none;
+  color: black;
+  font-size: 600%;
+  margin-top: 20%;
+  cursor: pointer;
+  margin: auto;
+  width: 95%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+
+}
+
+#about, #contact {
+  margin-top: 15%;
+}
+
+
+
+.container {
+  position: relative;
+  width: 35%;
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.image {
+  display: block;
+  width: 35%;
+  height: auto;
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+  position: absolute;
+  top: 90%;
+  left: 40%;
+  margin-right: -10%;
+  transform: translate(-50%, -50%)
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: black;
+  font-size: 20%;
+  position: absolute;
+  top: 90%;
+  left: 35%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.container1 {
+  position: relative;
+  width: 35%;
+  position: absolute;
+  top: 70%;
+  left: 80%;
+  margin-right: -10%;
+  transform: translate(-50%, -50%)
+}
+
+.image1 {
+  display: block;
+  width: 35%;
+  height: auto;
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  margin-right: -10%;
+  transform: translate(-50%, -50%)
+}
+
+.overlay1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+  position: absolute;
+  top: 90%;
+  left: 40%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.container1:hover .overlay1 {
+  opacity: 1;
+}
+
+.text1 {
+  color: black;
+  font-size: 20%;
+  position: absolute;
+  top: 90%;
+  left: 35%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
